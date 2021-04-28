@@ -45,9 +45,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F29F05E32638EFFD0035E866 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2A35D88262AD62B0047C615 /* ViewController.swift */,
+				F2A35D9C262B04330047C615 /* GameViewController.swift */,
+				F2A35D9F262B04930047C615 /* LeaderboardViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F29F05E52638F03B0035E866 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2A35D8A262AD62C0047C615 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F29F05E62638F0570035E866 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F2A35D99262AD7E00047C615 /* DogType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F2A35D78262AD62B0047C615 = {
 			isa = PBXGroup;
 			children = (
+				F29F05E62638F0570035E866 /* Models */,
+				F29F05E52638F03B0035E866 /* Views */,
+				F29F05E32638EFFD0035E866 /* Controllers */,
 				F2A35D83262AD62B0047C615 /* CatchDogGame */,
 				F2A35D82262AD62B0047C615 /* Products */,
 			);
@@ -66,11 +95,6 @@
 			children = (
 				F2A35D84262AD62B0047C615 /* AppDelegate.swift */,
 				F2A35D86262AD62B0047C615 /* SceneDelegate.swift */,
-				F2A35D88262AD62B0047C615 /* ViewController.swift */,
-				F2A35D8A262AD62C0047C615 /* Main.storyboard */,
-				F2A35D9F262B04930047C615 /* LeaderboardViewController.swift */,
-				F2A35D9C262B04330047C615 /* GameViewController.swift */,
-				F2A35D99262AD7E00047C615 /* DogType.swift */,
 				F2A35D8D262AD62C0047C615 /* Assets.xcassets */,
 				F2A35D8F262AD62C0047C615 /* LaunchScreen.storyboard */,
 				F2A35D92262AD62C0047C615 /* Info.plist */,

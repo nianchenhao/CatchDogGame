@@ -11,15 +11,13 @@ import AVFoundation
 class GameViewController: UIViewController {
 
     @IBOutlet var dogButtonOutlet: [UIButton]!
-    
     @IBOutlet weak var gameTimeLabel: UILabel!
-    
     @IBOutlet weak var scoreLabel: UILabel!
     
     let shibainuArray = Array(repeating: Dog.shibainu, count: 6)
     let chihuahuaArray = Array(repeating: Dog.chihuahua, count: 3)
+    var gameTime = 35 // 遊戲時間
     
-    var gameTime = 35
     var shibainuNum = 0
     var chihuahuaNum = 0
     var totalscore = 0
@@ -29,13 +27,10 @@ class GameViewController: UIViewController {
     let player = AVPlayer()
     let defaults = UserDefaults.standard
     
-    
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        
         playMusic()
         gameStart()
         sender.isHidden = true
-        
     }
     
     @IBAction func dogButtonPressed(_ sender: UIButton) {

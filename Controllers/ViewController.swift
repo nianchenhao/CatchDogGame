@@ -8,11 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var backgroundView: UIImageView!
     
     @IBAction func fbPressed(_ sender: UIButton) {
         openFacebook("100012853862111", "nianchenhao")
     }
+    
     @IBAction func igPressed(_ sender: UIButton) {
         openInstagram("nianchenhao")
     }
