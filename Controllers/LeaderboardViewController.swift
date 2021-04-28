@@ -12,25 +12,27 @@ class LeaderboardViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     @IBOutlet var lastResultLabel: [UILabel]!
-    
     @IBOutlet var rankLabel: [UILabel]!
-    
     @IBOutlet weak var backgroundView: UIImageView!
     
     func displayLastResult() {
+        
+        // Check if there are previous game results
         if defaults.array(forKey: "ResultArray") != nil {
             let latestResultArray = defaults.array(forKey: "ResultArray") as! [Int]
             lastResultLabel[0].text = "SHIBAINU: \(latestResultArray[0])"
             lastResultLabel[1].text = "CHIHUAHUA: \(latestResultArray[1])"
-            lastResultLabel[2].text = "SCORE: \(latestResultArray[2])"
-        
+            lastResultLabel[2].text = "BORDERCOLLIE: \(latestResultArray[2])"
+            lastResultLabel[3].text = "SCORE: \(latestResultArray[3])"
             
         }else{
             lastResultLabel[0].text = "SHIBAINU: 0"
             lastResultLabel[1].text = "CHIHUAHUA: 0"
-            lastResultLabel[2].text = "SCORE: 0"
+            lastResultLabel[2].text = "BORDERCOLLIE: 0"
+            lastResultLabel[3].text = "SCORE: 0"
         }
     }
+    
     func displayRank() {
         if defaults.array(forKey: "ScoreArray") != nil{
             let scoreArray = defaults.array(forKey: "ScoreArray") as! [Int]
@@ -54,14 +56,11 @@ class LeaderboardViewController: UIViewController {
         displayLastResult()
         displayRank()
         fetchImage()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func share(_ sender: Any) {
-        
-        let controller = UIActivityViewController(activityItems: ["我在打醜狗裡得到了\(String(lastResultLabel[2].text!))分！"], applicationActivities: nil)
+        let controller = UIActivityViewController(activityItems: ["我在打狗棒法裡得到了\(String(lastResultLabel[3].text!))分！"], applicationActivities: nil)
         present(controller, animated: true, completion: nil)
-        
     }
     @objc func fetchImage() {
         let urlStr = "https://picsum.photos/390/844"
