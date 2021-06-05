@@ -59,6 +59,27 @@ class ViewController: UIViewController {
                 }
             }.resume()
         }
+        
+//        let effect = UIBlurEffect(style: .dark)
+//        let effectView = UIVisualEffectView(effect: effect)
+//        effectView.frame = backgroundView.bounds
+//        backgroundView.addSubview(effectView)
+//
+//        effectView.effect = UIBlurEffect(style: .light)
+//
+//        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0, options: []) {
+//            effectView.effect = UIBlurEffect(style: .light)
+//        } completion: { (position) in
+//            if position == .end{
+//                UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0, options: []) {
+//                    effectView.effect = nil
+//                }
+//            }
+//
+//            }
+//        }
+
+        
     }
     
 //    func doubleTapGesture() {
@@ -70,5 +91,5 @@ class ViewController: UIViewController {
 //    }
     
 
-}
 
+}
